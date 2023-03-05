@@ -11,6 +11,7 @@
 		A2AEB6A829B2FFC00050C235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AEB6A729B2FFC00050C235 /* ContentView.swift */; };
 		A2AEB6AA29B2FFC10050C235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AEB6A929B2FFC10050C235 /* Assets.xcassets */; };
 		A2AEB6AD29B2FFC10050C235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AEB6AC29B2FFC10050C235 /* Preview Assets.xcassets */; };
+		A2AEB6B429B4C8980050C235 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AEB6B329B4C8980050C235 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A2AEB6A729B2FFC00050C235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2AEB6A929B2FFC10050C235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2AEB6AC29B2FFC10050C235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2AEB6B329B4C8980050C235 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				A2AEB6A729B2FFC00050C235 /* ContentView.swift */,
 				A2AEB6A929B2FFC10050C235 /* Assets.xcassets */,
 				A2AEB6AB29B2FFC10050C235 /* Preview Content */,
+				A2AEB6B329B4C8980050C235 /* HomeView.swift */,
 			);
 			path = SwiftUIMoMoHomeScreen;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AEB6B429B4C8980050C235 /* HomeView.swift in Sources */,
 				A2AEB6A829B2FFC00050C235 /* ContentView.swift in Sources */,
 				A2AEB6A629B2FFC00050C235 /* SwiftUIMoMoHomeScreenApp.swift in Sources */,
 			);
