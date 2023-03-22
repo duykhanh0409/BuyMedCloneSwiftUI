@@ -13,18 +13,8 @@ struct HomeViewBuyMed: View {
             ZStack {
                 Color.gray.opacity(0.3)
                 ScrollView{
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                        TextField("tìm kiếm ...", text: .constant(""))
-                            .tint(.white)
-                    }
-                    .padding(.horizontal)
-                    .padding(.vertical,10)
-                    .background(.white)
-                    .cornerRadius(10)
-                    .padding(.vertical)
-                    .padding(.horizontal)
-                    .shadow(radius: 112,x: 0,y: 5)
+                    searchHeader
+                    ServiceBlock()
                     
                 }
             }
