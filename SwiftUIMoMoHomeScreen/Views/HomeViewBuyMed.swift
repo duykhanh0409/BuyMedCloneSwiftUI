@@ -9,17 +9,24 @@ import SwiftUI
 
 struct HomeViewBuyMed: View {
     var body: some View {
-        ZStack {
-            Color.gray.opacity(0.3)
-            ScrollView{
-                headerView
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    TextField("tìm kiếm ....", text: .constant(""))
+        NavigationView {
+            ZStack {
+                Color.gray.opacity(0.3)
+                ScrollView{
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                        TextField("tìm kiếm ...", text: .constant(""))
+                    }
+                    
                 }
-                
             }
+            .navigationBarTitle("")
+                .navigationBarItems(
+                leading: headerLeading,
+                trailing: headerTrailing
+                )
         }
+      
     }
 }
 
@@ -30,21 +37,20 @@ struct HomeViewBuyMed_Previews: PreviewProvider {
 }
 
 extension HomeViewBuyMed {
-    private var headerView: some View{
-        HStack{
-            Image("logo_thuocsi")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 130)
-            Spacer()
-            
+    private var headerLeading: some View{
+        Image("logo_thuocsi")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 130)
+    }
+    
+    private var headerTrailing: some View{
+        HStack {
             Image(systemName: "message")
             Image(systemName: "bell.and.waves.left.and.right")
             Image(systemName: "cart")
             
             Image(systemName: "person.circle")
-                
         }
-        .padding(.horizontal)
     }
 }

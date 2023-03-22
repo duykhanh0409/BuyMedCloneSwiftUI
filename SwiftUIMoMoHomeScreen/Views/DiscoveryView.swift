@@ -9,7 +9,26 @@ import SwiftUI
 
 struct DiscoveryView: View {
     var body: some View {
-        Text("DiscoveryView")
+        NavigationView {
+           Text("TabView 1")
+               .navigationBarTitle("Dashboard")
+               .navigationBarItems(trailing:
+                   HStack {
+                       Button(action: {
+                           // more code here
+                       }) {
+                           Image(systemName: "arrow.clockwise")
+                               .font(.title)
+                       }
+                       Button(action: {
+                           // more code here
+                       }) {
+                           Image(systemName: "slider.horizontal.3")
+                               .font(.title)
+                       }
+                   }
+               )
+       }
     }
 }
 
