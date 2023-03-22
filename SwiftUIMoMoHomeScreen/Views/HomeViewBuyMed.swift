@@ -16,7 +16,15 @@ struct HomeViewBuyMed: View {
                     HStack {
                         Image(systemName: "magnifyingglass")
                         TextField("tìm kiếm ...", text: .constant(""))
+                            .tint(.white)
                     }
+                    .padding(.horizontal)
+                    .padding(.vertical,10)
+                    .background(.white)
+                    .cornerRadius(10)
+                    .padding(.vertical)
+                    .padding(.horizontal)
+                    .shadow(radius: 112,x: 0,y: 5)
                     
                 }
             }
@@ -52,5 +60,20 @@ extension HomeViewBuyMed {
             
             Image(systemName: "person.circle")
         }
+    }
+    
+    private var searchHeader: some View{
+        HStack {
+            Image(systemName: "magnifyingglass")
+            TextField("tìm kiếm ...", text: .constant(""))
+                .tint(.white)
+        }
+        .padding(.horizontal)
+        .padding(.vertical,10)
+        .background(.white)
+        .cornerRadius(10)
+        .padding(.vertical)
+        .padding(.horizontal)
+        .shadow(radius: 112,x: 0,y: 5)
     }
 }
