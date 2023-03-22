@@ -9,13 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, wo")
+        TabView {
+            HomeViewBuyMed()
+                .tabItem {
+                    Image(systemName: "house")
+                        .foregroundColor(.white)
+                    Text("Trang chủ")
+                }
+            DiscoveryView()
+                .tabItem {
+                    Image(systemName: "network")
+                        .foregroundColor(.white)
+                    Text("Khám phá")
+                }
+            QuickView()
+                .tabItem {
+                    Image(systemName: "cart")
+                        .foregroundColor(.white)
+                    Text("Xem Nhanh")
+                }
+            StoreView()
+                .tabItem {
+                    Image(systemName: "homekit")
+                        .foregroundColor(.white)
+                    Text("Cửa hàng")
+                }
+            PromotionView()
+                .tabItem {
+                    Image("ic_coupon")
+                        .foregroundColor(.white)
+                    Text("Khuyến mãi")
+                }
         }
-        .padding()
     }
 }
 

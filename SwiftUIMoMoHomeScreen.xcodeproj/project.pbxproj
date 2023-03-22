@@ -12,6 +12,11 @@
 		A2AEB6AA29B2FFC10050C235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AEB6A929B2FFC10050C235 /* Assets.xcassets */; };
 		A2AEB6AD29B2FFC10050C235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AEB6AC29B2FFC10050C235 /* Preview Assets.xcassets */; };
 		A2AEB6B429B4C8980050C235 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AEB6B329B4C8980050C235 /* HomeView.swift */; };
+		A2F32F4229CAEF7B00CC022A /* HomeViewBuyMed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F4129CAEF7B00CC022A /* HomeViewBuyMed.swift */; };
+		A2F32F4429CAF9CC00CC022A /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F4329CAF9CC00CC022A /* DiscoveryView.swift */; };
+		A2F32F4629CAF9E700CC022A /* QuickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F4529CAF9E700CC022A /* QuickView.swift */; };
+		A2F32F4829CAFA0000CC022A /* PromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F4729CAFA0000CC022A /* PromotionView.swift */; };
+		A2F32F4A29CAFA1400CC022A /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F4929CAFA1400CC022A /* StoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		A2AEB6A929B2FFC10050C235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2AEB6AC29B2FFC10050C235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2AEB6B329B4C8980050C235 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A2F32F4129CAEF7B00CC022A /* HomeViewBuyMed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBuyMed.swift; sourceTree = "<group>"; };
+		A2F32F4329CAF9CC00CC022A /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
+		A2F32F4529CAF9E700CC022A /* QuickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickView.swift; sourceTree = "<group>"; };
+		A2F32F4729CAFA0000CC022A /* PromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionView.swift; sourceTree = "<group>"; };
+		A2F32F4929CAFA1400CC022A /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 		A2AEB6A429B2FFC00050C235 /* SwiftUIMoMoHomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A2F32F4029CAEF5D00CC022A /* Views */,
 				A2AEB6A529B2FFC00050C235 /* SwiftUIMoMoHomeScreenApp.swift */,
 				A2AEB6A729B2FFC00050C235 /* ContentView.swift */,
 				A2AEB6A929B2FFC10050C235 /* Assets.xcassets */,
@@ -68,6 +79,18 @@
 				A2AEB6AC29B2FFC10050C235 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A2F32F4029CAEF5D00CC022A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2F32F4129CAEF7B00CC022A /* HomeViewBuyMed.swift */,
+				A2F32F4329CAF9CC00CC022A /* DiscoveryView.swift */,
+				A2F32F4529CAF9E700CC022A /* QuickView.swift */,
+				A2F32F4729CAFA0000CC022A /* PromotionView.swift */,
+				A2F32F4929CAFA1400CC022A /* StoreView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2AEB6B429B4C8980050C235 /* HomeView.swift in Sources */,
+				A2F32F4229CAEF7B00CC022A /* HomeViewBuyMed.swift in Sources */,
+				A2F32F4A29CAFA1400CC022A /* StoreView.swift in Sources */,
+				A2F32F4829CAFA0000CC022A /* PromotionView.swift in Sources */,
+				A2F32F4629CAF9E700CC022A /* QuickView.swift in Sources */,
 				A2AEB6A829B2FFC00050C235 /* ContentView.swift in Sources */,
 				A2AEB6A629B2FFC00050C235 /* SwiftUIMoMoHomeScreenApp.swift in Sources */,
+				A2F32F4429CAF9CC00CC022A /* DiscoveryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
