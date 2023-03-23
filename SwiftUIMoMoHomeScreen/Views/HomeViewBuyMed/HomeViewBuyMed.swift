@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeViewBuyMed: View {
     @StateObject private var vm = HomeViewModel()
-    
+   
     var body: some View {
         NavigationView {
             ZStack {
@@ -22,6 +22,7 @@ struct HomeViewBuyMed: View {
             }
             .onAppear {
                 vm.getDataServiceFromInternal()
+                print("khanh data",self.vm.dataServices)
             }
             .navigationBarTitle("")
                 .navigationBarItems(

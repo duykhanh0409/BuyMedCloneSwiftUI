@@ -16,7 +16,7 @@ struct ServiceModel: Codable {
 
 // MARK: - Datum
 struct Datum: Codable, Identifiable {
-    var id = UUID().uuidString
+    var id: String? = UUID().uuidString
     let appCode, appValueCode, createdTime: String?
     let lastUpdatedTime: String?
     let value: Value?
