@@ -23,6 +23,7 @@
 		A2F32F5B29CB134B00CC022A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F5A29CB134B00CC022A /* ApiManager.swift */; };
 		A2F32F5E29CBF3DA00CC022A /* DataServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F5D29CBF3DA00CC022A /* DataServiceApi.swift */; };
 		A2F32F6029CBF56900CC022A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F5F29CBF56900CC022A /* Config.swift */; };
+		A2F32F6229CBF95B00CC022A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		A2F32F5A29CB134B00CC022A /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		A2F32F5D29CBF3DA00CC022A /* DataServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceApi.swift; sourceTree = "<group>"; };
 		A2F32F5F29CBF56900CC022A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				A2F32F5029CB05C200CC022A /* Block */,
 				A2F32F4129CAEF7B00CC022A /* HomeViewBuyMed.swift */,
+				A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */,
 			);
 			path = HomeViewBuyMed;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				A2AEB6A829B2FFC00050C235 /* ContentView.swift in Sources */,
 				A2AEB6A629B2FFC00050C235 /* SwiftUIMoMoHomeScreenApp.swift in Sources */,
 				A2F32F4429CAF9CC00CC022A /* DiscoveryView.swift in Sources */,
+				A2F32F6229CBF95B00CC022A /* HomeViewModel.swift in Sources */,
 				A2F32F5E29CBF3DA00CC022A /* DataServiceApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
