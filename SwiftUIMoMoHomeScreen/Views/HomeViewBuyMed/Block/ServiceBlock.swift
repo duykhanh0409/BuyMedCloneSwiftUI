@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ServiceBlock: View {
-
+    let listService: ServiceModel
     var body: some View {
         HStack(spacing: 10) {
-            ForEach(0..<4, id: \.self) { _ in
-                ServiceBlockItem()
+            ForEach(listService.data) { service in
+                ServiceBlockItem(service: service)
             }
         }
         .padding(.horizontal)
     }
 }
 
-struct ServiceBlock_Previews: PreviewProvider {
-    static var previews: some View {
-        ServiceBlock()
-    }
-}
+//struct ServiceBlock_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ServiceBlock()
+//    }
+//}

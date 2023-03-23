@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct HomeViewBuyMed: View {
+    @StateObject private var vm = HomeViewModel()
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color.gray.opacity(0.3)
                 ScrollView{
                     searchHeader
-                    ServiceBlock()
+                    ServiceBlock(listService: vm.dataServices)
                     
                 }
+            }
+            .onAppear {
+                vm.getDataServiceFromInternal()
             }
             .navigationBarTitle("")
                 .navigationBarItems(

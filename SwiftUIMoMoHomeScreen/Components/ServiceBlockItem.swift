@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ServiceBlockItem: View {
     let screenSize: CGRect = UIScreen.main.bounds
+    let service: Datum
     var body: some View {
         VStack {
-            Image("ic_coupon")
+            Image(service.value?.icon ?? "")
                 .resizable()
                 .scaledToFit()
                 .frame(width: screenSize.width/8, height: screenSize.width/8)
@@ -21,14 +22,16 @@ struct ServiceBlockItem: View {
                 )
                 .shadow(radius: 4,x: 2, y: 5)
             
+            Text(service.value?.name ?? "")
+            
         }
     }
 }
 
-struct ServiceBlockItem_Previews: PreviewProvider {
-    static var previews: some View {
-        ServiceBlockItem()
-            .frame(width: 200, height: 200)
-            .background(.gray.opacity(0.4))
-    }
-}
+//struct ServiceBlockItem_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ServiceBlockItem(service: D)
+//            .frame(width: 200, height: 200)
+//            .background(.gray.opacity(0.4))
+//    }
+//}
