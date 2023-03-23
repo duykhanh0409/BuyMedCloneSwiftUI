@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - Welcome
-struct Welcome: Codable {
+// MARK: - ServiceModel
+struct ServiceModel: Codable {
     let status: String
     let data: [Datum]
     let message: String

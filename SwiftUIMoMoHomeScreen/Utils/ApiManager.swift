@@ -7,10 +7,10 @@
 
 import Foundation
 
-class ApiService{
+class ApiManager{
     static func fetchData <T:Codable> (urlString: String, type: T.Type, method: String, onSuccess: @escaping (T)->Void, onFail: @escaping(String) -> Void) {
         
-        guard let url = URL(string: urlString) else {return}
+        guard let url = URL(string: Config.baseUrl + urlString) else {return}
         
         var request = URLRequest(url: url)
         request.httpMethod = method
