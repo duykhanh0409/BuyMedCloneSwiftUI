@@ -22,7 +22,7 @@ struct HomeViewBuyMed: View {
             }
             .onAppear {
                 vm.getDataServiceFromInternal()
-                print("khanh data",self.vm.dataServices)
+
             }
             .navigationBarTitle("")
                 .navigationBarItems(

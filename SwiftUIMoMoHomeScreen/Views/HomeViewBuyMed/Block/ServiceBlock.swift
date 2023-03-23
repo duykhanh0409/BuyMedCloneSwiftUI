@@ -11,9 +11,10 @@ struct ServiceBlock: View {
     let listService: ServiceModel
     var body: some View {
         HStack(spacing: 10) {
-            ForEach(listService.data) { service in
-                ServiceBlockItem(service: service)
-            }
+                ForEach(listService.data, id: \.appValueCode) { service in
+                    ServiceBlockItem(service: service)
+                }
+
         }
         .padding(.horizontal)
     }

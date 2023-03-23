@@ -15,15 +15,28 @@ struct ServiceModel: Codable {
 }
 
 // MARK: - Datum
-struct Datum: Codable, Identifiable {
-    var id: String? = UUID().uuidString
+struct Datum: Codable {
+//    static func == (lhs: Datum, rhs: Datum) -> Bool {
+//        return lhs.appCode == rhs.appCode && lhs.appValueCode == rhs.appValueCode && lhs.createdTime == rhs.createdTime && lhs.lastUpdatedTime == rhs.lastUpdatedTime && lhs.value == rhs.value && lhs.id == rhs.id
+//    }
+//    var uid: String? = UUID().uuidString
+//    var id: String? = UUID().uuidString
     let appCode, appValueCode, createdTime: String?
     let lastUpdatedTime: String?
     let value: Value?
 }
 
+//extension Datum: Hashable {
+//        static func == (lhs: Self, rhs: Self) -> Bool {
+//            lhs.id == rhs.id
+//        }
+//        func hash(into hasher: inout Hasher) {
+//            hasher.combine(id)
+//        }
+//    }
+
 // MARK: - Value
-struct Value: Codable {
+struct Value: Codable, Equatable {
     let defaultParam, description, extra, icon: String?
     let key, language, name, port: String?
     let query, refID: String?

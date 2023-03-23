@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUIMoMoHomeScreenApp: App {
+    @StateObject private var vm = HomeViewModel()
+   
     var body: some Scene {
         WindowGroup {
            ContentView()
+                .environmentObject(vm)
         }
     }
 }
