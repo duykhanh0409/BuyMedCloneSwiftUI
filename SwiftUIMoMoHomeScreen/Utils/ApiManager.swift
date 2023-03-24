@@ -21,20 +21,22 @@ class ApiManager {
     
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
     
-            guard let data = data, error == nil else {
-                return
-            }
-            // get status
-            let response = response as! HTTPURLResponse
-            let status = response.statusCode
-            
-            do{
-                let decoder = JSONDecoder()
-                let dataResponse = try decoder.decode(T.self, from: data)
-                onSuccess(dataResponse)
-            }catch {
-                print("call data error", error.localizedDescription )
-                onFail(error.localizedDescription)
+            DispatchQueue.main.async {
+                guard let data = data, error == nil else {
+                    return
+                }
+                // get status
+                let response = response as! HTTPURLResponse
+                let status = response.statusCode
+                
+                do{
+                    let decoder = JSONDecoder()
+                    let dataResponse = try decoder.decode(T.self, from: data)
+                    onSuccess(dataResponse)
+                }catch {
+                    print("call data error", error.localizedDescription )
+                    onFail(error.localizedDescription)
+                }
             }
         }
         task.resume()
