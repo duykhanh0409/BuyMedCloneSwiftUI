@@ -10,12 +10,12 @@ import Foundation
 // MARK: - ServiceModel
 struct ServiceModel: Codable {
     let status: String?
-    let data: [Datum]
+    let data: [DataServiceItem]
     let message: String?
 }
 
 // MARK: - Datum
-struct Datum: Codable {
+struct DataServiceItem: Codable {
 //    static func == (lhs: Datum, rhs: Datum) -> Bool {
 //        return lhs.appCode == rhs.appCode && lhs.appValueCode == rhs.appValueCode && lhs.createdTime == rhs.createdTime && lhs.lastUpdatedTime == rhs.lastUpdatedTime && lhs.value == rhs.value && lhs.id == rhs.id
 //    }

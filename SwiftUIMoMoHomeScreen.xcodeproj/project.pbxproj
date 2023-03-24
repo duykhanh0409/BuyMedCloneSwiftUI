@@ -25,6 +25,7 @@
 		A2F32F6029CBF56900CC022A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F5F29CBF56900CC022A /* Config.swift */; };
 		A2F32F6229CBF95B00CC022A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */; };
 		A2F32F6429CC40CA00CC022A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6329CC40CA00CC022A /* ApiManager.swift */; };
+		A2F32F6629CD916600CC022A /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6529CD916600CC022A /* BannerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		A2F32F5F29CBF56900CC022A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A2F32F6329CC40CA00CC022A /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		A2F32F6529CD916600CC022A /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				A2F32F5829CB0FBB00CC022A /* ServiceModel.swift */,
+				A2F32F6529CD916600CC022A /* BannerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				A2F32F4A29CAFA1400CC022A /* StoreView.swift in Sources */,
 				A2F32F4829CAFA0000CC022A /* PromotionView.swift in Sources */,
 				A2F32F4629CAF9E700CC022A /* QuickView.swift in Sources */,
+				A2F32F6629CD916600CC022A /* BannerModel.swift in Sources */,
 				A2F32F5929CB0FBB00CC022A /* ServiceModel.swift in Sources */,
 				A2F32F5529CB096000CC022A /* ServiceBlock.swift in Sources */,
 				A2F32F5329CB061F00CC022A /* ServiceBlockItem.swift in Sources */,

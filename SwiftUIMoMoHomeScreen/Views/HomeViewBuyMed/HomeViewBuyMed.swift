@@ -9,11 +9,12 @@ import SwiftUI
 
 struct HomeViewBuyMed: View {
     @StateObject private var vm = HomeViewModel()
+    @State private var searchText = ""
    
     var body: some View {
         NavigationView {
             ZStack {
-                Color.gray.opacity(0.3)
+                Color.gray.opacity(0.1)
                 ScrollView{
                     searchHeader
                     ServiceBlock(listService: vm.dataServices)
@@ -62,15 +63,15 @@ extension HomeViewBuyMed {
     private var searchHeader: some View{
         HStack {
             Image(systemName: "magnifyingglass")
-            TextField("tìm kiếm ...", text: .constant(""))
+            TextField("tìm kiếm ...", text: $searchText)
                 .tint(.white)
         }
         .padding(.horizontal)
         .padding(.vertical,10)
         .background(.white)
-        .cornerRadius(10)
+        .cornerRadius(20)
         .padding(.vertical)
         .padding(.horizontal)
-        .shadow(radius: 112,x: 0,y: 5)
+        .shadow(radius: 6,x: 0.3,y: 1)
     }
 }
