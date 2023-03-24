@@ -11,7 +11,7 @@ import Combine
 class NetworkingManager{
     
     enum NetworkingError: LocalizedError {
-        case BadURLResponse(url: URL)
+        case BadURLResponse(url: URLRequest)
         case unknow
         
         var errorDescription: String? {
@@ -24,18 +24,21 @@ class NetworkingManager{
         }
     }
     
-//    static func fetchData(url:String) -> Publishers.ReceiveOn<Publishers.TryMap<Publishers.SubscribeOn<URLSession.DataTaskPublisher,DispatchQueue>, Data>, DispatchQueue>{
-//        guard let urlString = URL(string: Config.baseUrl + url) else {
-//            print("Url have issue")
-//            return
-//        }
-//        return URLSession.shared.dataTaskPublisher(for: urlString)
-//                .subscribe(on: DispatchQueue.global(qos: .default))
-//                .tryMap { try handleUrlResponse(output: $0,url:urlString )}
-//                .receive(on: DispatchQueue.main)
-//    }
-//
-    static func handleUrlResponse(output: URLSession.DataTaskPublisher.Output, url: URL) throws -> Data{
+    static func fetchData(url:String, method: String) -> Publishers.ReceiveOn<Publishers.TryMap<Publishers.SubscribeOn<URLSession.DataTaskPublisher,DispatchQueue>, Data>, DispatchQueue>{
+        let urlString = URL(string: Config.baseUrl + url)
+        var urlRequest = URLRequest(url: urlString!)
+          urlRequest.httpMethod = method
+        
+        urlRequest.setValue("Basic \(Config.baseToken)",
+                              forHTTPHeaderField: "Authorization")
+        // chổ này chưa biết unwrap cái URL sao nên đang để force safety un
+        return URLSession.shared.dataTaskPublisher(for: urlRequest)
+                .subscribe(on: DispatchQueue.global(qos: .default))
+                .tryMap { try handleUrlResponse(output: $0,url: urlRequest )}
+                .receive(on: DispatchQueue.main)
+    }
+
+    static func handleUrlResponse(output: URLSession.DataTaskPublisher.Output, url: URLRequest) throws -> Data{
         guard let response = output.response as? HTTPURLResponse,
               response.statusCode >= 200 && response.statusCode < 300 else{
             throw NetworkingError.BadURLResponse(url: url)

@@ -11,22 +11,22 @@ import Combine
 class DataServiceApi {
     @Published var dataServices:ServiceModel? = nil
     
-//    private var dataServiceScription: AnyCancellable?
+    private var dataServiceScription: AnyCancellable?
     
 //    init(){
 //        getDataServiceFromInternal()
 //    }
-    
-//    func getDataServiceFromInternalFollowCombile(){
-//        let url = "/core/config-manager/v1/app-value/single"
-//        dataServiceScription = ApiManager.fetchData(url: url)
-//            .decode(type: ServiceModel.self, decoder: JSONDecoder())
-//            .sink(receiveCompletion: ApiManager.handleCompletion, receiveValue: {[weak self] (returnedService) in
-//                self?.dataServices = returnedService
-//                self?.dataServiceScription?.cancel()
-//            })
-//
-//    }
+    // MARK: - Call Api with Combine
+    func getDataServiceFromInternalFollowCombile(){
+        let url = "/core/config-manager/v1/app-value/single?appCode=972AXHR2"
+        dataServiceScription = NetworkingManager.fetchData(url: url,method: "GET")
+            .decode(type: ServiceModel.self, decoder: JSONDecoder())
+            .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: {[weak self] (returnedService) in
+                self?.dataServices = returnedService
+                self?.dataServiceScription?.cancel()
+            })
+
+    }
     
     // MARK: - Call Api with URLSession
     func getDataServiceFromInternal(onCallBack: @escaping (ServiceModel)->Void){

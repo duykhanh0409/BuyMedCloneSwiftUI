@@ -21,7 +21,8 @@ struct HomeViewBuyMed: View {
                 }
             }
             .onAppear {
-                vm.getDataServiceFromInternal()
+//                vm.getDataServiceFromInternal()
+                vm.getDataServiceFromInternalFromCombine()
 
             }
             .navigationBarTitle("")
