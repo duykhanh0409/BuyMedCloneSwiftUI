@@ -13,9 +13,9 @@ class DataServiceApi {
     
 //    private var dataServiceScription: AnyCancellable?
     
-    init(){
-        getDataServiceFromInternal()
-    }
+//    init(){
+//        getDataServiceFromInternal()
+//    }
     
 //    func getDataServiceFromInternalFollowCombile(){
 //        let url = "/core/config-manager/v1/app-value/single"
@@ -28,10 +28,11 @@ class DataServiceApi {
 //
 //    }
     
-    func getDataServiceFromInternal(){
-        let url = "/core/config-manager/v1/app-value/single"
+    // MARK: - Call Api with URLSession
+    func getDataServiceFromInternal(onCallBack: @escaping (ServiceModel)->Void){
+        let url = "/core/config-manager/v1/app-value/single?appCode=972AXHR2"
         ApiManager.fetchData(urlString: url, type: ServiceModel.self, method: "GET") { response in
-            self.dataServices = response
+            onCallBack(response)
         } onFail: { error in
             print("call api data service error")
         }
