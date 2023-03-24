@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ServiceBlockItem: View {
     let screenSize: CGRect = UIScreen.main.bounds
-    let service: DataServiceItem
+    let service: Feature
     var body: some View {
         Button(action: {
             
@@ -40,7 +40,7 @@ struct ServiceBlockItem: View {
 
 struct ServiceBlockItem_Previews: PreviewProvider {
     static var previews: some View {
-        ServiceBlockItem(service: DataServiceItem(appCode: "", appValueCode: "", createdTime: "", lastUpdatedTime: "", value: Value(defaultParam: "", description: "", extra: "", icon: "ic_voucher", key: "", language: "", name: "khuyến mãi da tang", port: "", query: "", refID: "", sortOrder: 2, special: "", status: 1, uri: "", user: "")))
+        ServiceBlockItem(service: Feature(appCode: "", appValueCode: "", createdTime: "", lastUpdatedTime: "", value: Value(defaultParam: "", description: "", extra: "", icon: "ic_voucher", key: "", language: "", name: "khuyến mãi da tang", port: "", query: "", refID: "", sortOrder: 2, special: "", status: 1, uri: "", user: "")))
             .frame(width: 70, height: 200)
             .background(.gray.opacity(0.4))
     }
