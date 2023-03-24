@@ -37,10 +37,24 @@ class NetworkingManager{
                 .tryMap { try handleUrlResponse(output: $0,url: urlRequest )}
                 .receive(on: DispatchQueue.main)
     }
+    static func fetchDataWithDomainWeb(url:String, method: String) -> Publishers.ReceiveOn<Publishers.TryMap<Publishers.SubscribeOn<URLSession.DataTaskPublisher,DispatchQueue>, Data>, DispatchQueue>{
+        let urlString = URL(string: Config.baseUrlWeb + url)
+        var urlRequest = URLRequest(url: urlString!)
+          urlRequest.httpMethod = method
+        
+        urlRequest.setValue("Basic \(Config.baseToken)",
+                              forHTTPHeaderField: "Authorization")
+        // chổ này chưa biết unwrap cái URL sao nên đang để force safety un
+        return URLSession.shared.dataTaskPublisher(for: urlRequest)
+                .subscribe(on: DispatchQueue.global(qos: .default))
+                .tryMap { try handleUrlResponse(output: $0,url: urlRequest )}
+                .receive(on: DispatchQueue.main)
+    }
 
     static func handleUrlResponse(output: URLSession.DataTaskPublisher.Output, url: URLRequest) throws -> Data{
         guard let response = output.response as? HTTPURLResponse,
               response.statusCode >= 200 && response.statusCode < 300 else{
+            print("khanh response",(output.response as? HTTPURLResponse)?.statusCode)
             throw NetworkingError.BadURLResponse(url: url)
         }
         return output.data
@@ -51,7 +65,7 @@ class NetworkingManager{
         case .finished:
             break
         case .failure(let error):
-            print("khanh error"+error.localizedDescription)
+            print("khanh error" + error.localizedDescription)
         }
     }
     

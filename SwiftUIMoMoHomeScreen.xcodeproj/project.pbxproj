@@ -26,10 +26,11 @@
 		A2F32F6229CBF95B00CC022A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */; };
 		A2F32F6429CC40CA00CC022A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6329CC40CA00CC022A /* ApiManager.swift */; };
 		A2F32F6629CD916600CC022A /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6529CD916600CC022A /* BannerModel.swift */; };
+		A2F32F6829CDEFEE00CC022A /* GetBannerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6729CDEFEE00CC022A /* GetBannerApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A2AEB6A229B2FFC00050C235 /* SwiftUIMoMoHomeScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMoMoHomeScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AEB6A229B2FFC00050C235 /* Buymed SwifUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Buymed SwifUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AEB6A529B2FFC00050C235 /* SwiftUIMoMoHomeScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMoMoHomeScreenApp.swift; sourceTree = "<group>"; };
 		A2AEB6A729B2FFC00050C235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2AEB6A929B2FFC10050C235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A2F32F6329CC40CA00CC022A /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		A2F32F6529CD916600CC022A /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		A2F32F6729CDEFEE00CC022A /* GetBannerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBannerApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,7 @@
 		A2AEB6A329B2FFC00050C235 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A2AEB6A229B2FFC00050C235 /* SwiftUIMoMoHomeScreen.app */,
+				A2AEB6A229B2FFC00050C235 /* Buymed SwifUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				A2F32F5D29CBF3DA00CC022A /* DataServiceApi.swift */,
+				A2F32F6729CDEFEE00CC022A /* GetBannerApi.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -193,9 +196,9 @@
 		A2F32F5C29CBF35B00CC022A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A2F32F5A29CB134B00CC022A /* NetworkingManager.swift */,
 				A2F32F5F29CBF56900CC022A /* Config.swift */,
 				A2F32F6329CC40CA00CC022A /* ApiManager.swift */,
+				A2F32F5A29CB134B00CC022A /* NetworkingManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -217,7 +220,7 @@
 			);
 			name = SwiftUIMoMoHomeScreen;
 			productName = SwiftUIMoMoHomeScreen;
-			productReference = A2AEB6A229B2FFC00050C235 /* SwiftUIMoMoHomeScreen.app */;
+			productReference = A2AEB6A229B2FFC00050C235 /* Buymed SwifUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -275,6 +278,7 @@
 				A2F32F4229CAEF7B00CC022A /* HomeViewBuyMed.swift in Sources */,
 				A2F32F5B29CB134B00CC022A /* NetworkingManager.swift in Sources */,
 				A2F32F6029CBF56900CC022A /* Config.swift in Sources */,
+				A2F32F6829CDEFEE00CC022A /* GetBannerApi.swift in Sources */,
 				A2F32F4A29CAFA1400CC022A /* StoreView.swift in Sources */,
 				A2F32F4829CAFA0000CC022A /* PromotionView.swift in Sources */,
 				A2F32F4629CAF9E700CC022A /* QuickView.swift in Sources */,
@@ -428,7 +432,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "khanh-swiftUI.SwiftUIMoMoHomeScreen";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Buymed SwifUI";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -456,7 +460,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "khanh-swiftUI.SwiftUIMoMoHomeScreen";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Buymed SwifUI";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

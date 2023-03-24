@@ -24,6 +24,7 @@ struct HomeViewBuyMed: View {
             .onAppear {
 //                vm.getDataServiceFromInternal()
                 vm.getDataServiceFromInternalFromCombine()
+                vm.getDataBannerHome()
 
             }
             .navigationBarTitle("")
