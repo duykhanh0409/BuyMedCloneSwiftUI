@@ -27,6 +27,8 @@
 		A2F32F6429CC40CA00CC022A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6329CC40CA00CC022A /* ApiManager.swift */; };
 		A2F32F6629CD916600CC022A /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6529CD916600CC022A /* BannerModel.swift */; };
 		A2F32F6829CDEFEE00CC022A /* GetBannerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6729CDEFEE00CC022A /* GetBannerApi.swift */; };
+		A2F32F6A29CEA1AE00CC022A /* ImageCarouselBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6929CEA1AE00CC022A /* ImageCarouselBlock.swift */; };
+		A2F32F6C29CEAA3700CC022A /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6B29CEAA3700CC022A /* Carousel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		A2F32F6329CC40CA00CC022A /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		A2F32F6529CD916600CC022A /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		A2F32F6729CDEFEE00CC022A /* GetBannerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBannerApi.swift; sourceTree = "<group>"; };
+		A2F32F6929CEA1AE00CC022A /* ImageCarouselBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselBlock.swift; sourceTree = "<group>"; };
+		A2F32F6B29CEAA3700CC022A /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				A2F32F5429CB096000CC022A /* ServiceBlock.swift */,
+				A2F32F6929CEA1AE00CC022A /* ImageCarouselBlock.swift */,
+				A2F32F6B29CEAA3700CC022A /* Carousel.swift */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -276,12 +282,14 @@
 				A2F32F6429CC40CA00CC022A /* ApiManager.swift in Sources */,
 				A2AEB6B429B4C8980050C235 /* HomeView.swift in Sources */,
 				A2F32F4229CAEF7B00CC022A /* HomeViewBuyMed.swift in Sources */,
+				A2F32F6C29CEAA3700CC022A /* Carousel.swift in Sources */,
 				A2F32F5B29CB134B00CC022A /* NetworkingManager.swift in Sources */,
 				A2F32F6029CBF56900CC022A /* Config.swift in Sources */,
 				A2F32F6829CDEFEE00CC022A /* GetBannerApi.swift in Sources */,
 				A2F32F4A29CAFA1400CC022A /* StoreView.swift in Sources */,
 				A2F32F4829CAFA0000CC022A /* PromotionView.swift in Sources */,
 				A2F32F4629CAF9E700CC022A /* QuickView.swift in Sources */,
+				A2F32F6A29CEA1AE00CC022A /* ImageCarouselBlock.swift in Sources */,
 				A2F32F6629CD916600CC022A /* BannerModel.swift in Sources */,
 				A2F32F5929CB0FBB00CC022A /* ServiceModel.swift in Sources */,
 				A2F32F5529CB096000CC022A /* ServiceBlock.swift in Sources */,

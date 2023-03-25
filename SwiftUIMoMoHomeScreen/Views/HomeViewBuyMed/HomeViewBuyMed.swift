@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeViewBuyMed: View {
     @StateObject private var vm = HomeViewModel()
     @State private var searchText = ""
+    let images = ["anh1","anh2","anh3"]
    
     var body: some View {
         NavigationView {
@@ -18,7 +19,28 @@ struct HomeViewBuyMed: View {
                 ScrollView{
                     searchHeader
                     ServiceBlock(listService: vm.dataServices)
-                    
+                    GeometryReader { geometry in
+                                    ImageCarouselView(numberOfImages: 3) {
+                                        Image("anh1")
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: geometry.size.width, height: geometry.size.height)
+                                            .clipped()
+                                            .tag("anh1")
+                                        Image("anh2")
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: geometry.size.width, height: geometry.size.height)
+                                            .clipped()
+                                            .tag("anh2")
+                                        Image("anh3")
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: geometry.size.width, height: geometry.size.height)
+                                            .clipped()
+                                            .tag("anh3")
+                                    }
+                                }.frame(height: 300, alignment: .center)
                 }
             }
             .onAppear {
