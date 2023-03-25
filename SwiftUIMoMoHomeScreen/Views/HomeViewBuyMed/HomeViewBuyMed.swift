@@ -21,25 +21,17 @@ struct HomeViewBuyMed: View {
                     ServiceBlock(listService: vm.dataServices)
                     GeometryReader { geometry in
                                     ImageCarouselView(numberOfImages: 3) {
-                                        Image("anh1")
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: geometry.size.width, height: geometry.size.height)
-                                            .clipped()
-                                            .tag("anh1")
-                                        Image("anh2")
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: geometry.size.width, height: geometry.size.height)
-                                            .clipped()
-                                            .tag("anh2")
-                                        Image("anh3")
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: geometry.size.width, height: geometry.size.height)
-                                            .clipped()
-                                            .tag("anh3")
+                                        ForEach(0..<images.count) { index in
+                                            Image(images[index])
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(width: geometry.size.width, height: geometry.size.height)
+                                                .clipped()
+                                                .scaledToFill()
+                                                .tag("anh1")
+                                        }
                                     }
+                                   
                                 }.frame(height: 300, alignment: .center)
                 }
             }
