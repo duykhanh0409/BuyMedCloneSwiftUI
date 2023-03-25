@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct HomeViewBuyMed: View {
     @StateObject private var vm = HomeViewModel()
@@ -19,21 +20,9 @@ struct HomeViewBuyMed: View {
                 ScrollView{
                     searchHeader
                     ServiceBlock(listService: vm.dataServices)
-                    GeometryReader { geometry in
-                                    ImageCarouselView(numberOfImages: 3) {
-                                        ForEach(0..<images.count) { index in
-                                            Image(images[index])
-                                                .resizable()
-                                                .scaledToFill()
-                                                .frame(width: geometry.size.width, height: geometry.size.height)
-                                                .clipped()
-                                                .scaledToFill()
-                                                .tag("anh1")
-                                        }
-                                    }
-                                   
-                                }.frame(height: 300, alignment: .center)
+                    carouselBanner
                 }
+                   
             }
             .onAppear {
 //                vm.getDataServiceFromInternal()
@@ -89,4 +78,32 @@ extension HomeViewBuyMed {
         .padding(.horizontal)
         .shadow(radius: 6,x: 0.3,y: 1)
     }
+    
+    private var carouselBanner: some View {
+        GeometryReader { geometry in
+            ImageCarouselView(numberOfImages: 3) {
+                ForEach(0..<images.count) { index in
+                        Image(images[index])
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .clipped()
+                        .scaledToFill()
+                        .tag(images[index])
+                            }
+                        }
+//                ForEach(vm.dataBanner.data, id: \.code) { banner in
+//                        AnimatedImage(url: URL(string: banner.imgURL))
+//                        .resizable()
+//                        .scaledToFill()
+//                        .frame(width: geometry.size.width, height: geometry.size.height)
+//                        .clipped()
+//                        .scaledToFill()
+//                        .tag(banner.name)
+//                            }
+//                        }
+                       
+                    }.frame(height: 300, alignment: .center)
+    }
+    
 }
