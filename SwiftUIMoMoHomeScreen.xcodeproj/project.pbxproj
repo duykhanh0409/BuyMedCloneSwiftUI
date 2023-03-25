@@ -31,6 +31,8 @@
 		A2F32F6C29CEAA3700CC022A /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6B29CEAA3700CC022A /* Carousel.swift */; };
 		A2F32F7029CEC3F000CC022A /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F6F29CEC3F000CC022A /* URLImage.swift */; };
 		A2F32F7329CEC7EF00CC022A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A2F32F7229CEC7EF00CC022A /* SDWebImageSwiftUI */; };
+		A2F32F7729CEE04C00CC022A /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F7629CEE04C00CC022A /* ProductModel.swift */; };
+		A2F32F7929CEE6E900CC022A /* GetProductApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F7829CEE6E900CC022A /* GetProductApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		A2F32F6929CEA1AE00CC022A /* ImageCarouselBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselBlock.swift; sourceTree = "<group>"; };
 		A2F32F6B29CEAA3700CC022A /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		A2F32F6F29CEC3F000CC022A /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		A2F32F7629CEE04C00CC022A /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		A2F32F7829CEE6E900CC022A /* GetProductApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 			children = (
 				A2F32F5829CB0FBB00CC022A /* ServiceModel.swift */,
 				A2F32F6529CD916600CC022A /* BannerModel.swift */,
+				A2F32F7629CEE04C00CC022A /* ProductModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			children = (
 				A2F32F5D29CBF3DA00CC022A /* DataServiceApi.swift */,
 				A2F32F6729CDEFEE00CC022A /* GetBannerApi.swift */,
+				A2F32F7829CEE6E900CC022A /* GetProductApi.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -313,7 +319,9 @@
 				A2F32F5B29CB134B00CC022A /* NetworkingManager.swift in Sources */,
 				A2F32F6029CBF56900CC022A /* Config.swift in Sources */,
 				A2F32F6829CDEFEE00CC022A /* GetBannerApi.swift in Sources */,
+				A2F32F7729CEE04C00CC022A /* ProductModel.swift in Sources */,
 				A2F32F4A29CAFA1400CC022A /* StoreView.swift in Sources */,
+				A2F32F7929CEE6E900CC022A /* GetProductApi.swift in Sources */,
 				A2F32F4829CAFA0000CC022A /* PromotionView.swift in Sources */,
 				A2F32F4629CAF9E700CC022A /* QuickView.swift in Sources */,
 				A2F32F6A29CEA1AE00CC022A /* ImageCarouselBlock.swift in Sources */,
