@@ -20,7 +20,7 @@ struct HomeViewBuyMed: View {
                 ScrollView{
                     searchHeader
                     ServiceBlock(listService: vm.dataServices)
-                    carouselBanner
+                    carouselBannerWithAnimationImage
                 }
                    
             }
@@ -92,18 +92,30 @@ extension HomeViewBuyMed {
                         .tag(images[index])
                             }
                         }
-//                ForEach(vm.dataBanner.data, id: \.code) { banner in
-//                        AnimatedImage(url: URL(string: banner.imgURL))
-//                        .resizable()
-//                        .scaledToFill()
-//                        .frame(width: geometry.size.width, height: geometry.size.height)
-//                        .clipped()
-//                        .scaledToFill()
-//                        .tag(banner.name)
-//                            }
-//                        }
                        
-                    }.frame(height: 300, alignment: .center)
+                    }
+        .frame(height: 300, alignment: .center)
     }
     
+    private var carouselBannerWithAnimationImage: some View {
+        GeometryReader { geometry in
+            ImageCarouselView(numberOfImages: 3) {
+                ForEach(vm.dataBanner.data, id: \.code) { banner in
+                        AnimatedImage(url: URL(string: banner.imgURL))
+                        .resizable()
+                        .indicator(.activity)
+                        .scaledToFill()
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .clipped()
+                        .scaledToFill()
+                        .tag(banner.name)
+                            }
+                        }
+                    }
+        .frame(height: 300, alignment: .center)
+    }
 }
+
+
+
+

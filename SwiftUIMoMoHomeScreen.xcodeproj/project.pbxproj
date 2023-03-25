@@ -129,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				A2F32F5029CB05C200CC022A /* Block */,
-				A2F32F4129CAEF7B00CC022A /* HomeViewBuyMed.swift */,
-				A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */,
+				A2F32F7529CED9CE00CC022A /* ViewModel */,
+				A2F32F7429CED9BC00CC022A /* Views */,
 			);
 			path = HomeViewBuyMed;
 			sourceTree = "<group>";
@@ -212,6 +212,22 @@
 				A2F32F5A29CB134B00CC022A /* NetworkingManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A2F32F7429CED9BC00CC022A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2F32F4129CAEF7B00CC022A /* HomeViewBuyMed.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2F32F7529CED9CE00CC022A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

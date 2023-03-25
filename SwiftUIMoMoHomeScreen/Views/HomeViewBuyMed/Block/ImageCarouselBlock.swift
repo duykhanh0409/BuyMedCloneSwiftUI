@@ -35,6 +35,7 @@ struct ImageCarouselView<Content: View>: View {
                     controlPage
                 })
                 .onReceive(self.timer) { _ in
+                    print("khanh currentIndex", self.currentIndex)
                     withAnimation {
                         self.currentIndex = self.currentIndex < 3 ? self.currentIndex + 1 : 0
                     }
@@ -54,6 +55,7 @@ extension ImageCarouselView {
                 withAnimation {
                     currentIndex = currentIndex > 0 ? currentIndex - 1 : numberOfImages - 1
                 }
+               
             } label: {
                 Image(systemName: "chevron.left")
                     .padding(10)
@@ -80,26 +82,32 @@ extension ImageCarouselView {
 }
 
 
-
-//            HStack(spacing: 0) {
-//                   self.content
-//               }
-//               .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
-//               .offset(x: CGFloat(self.currentIndex) * -geometry.size.width, y: 0)
-//               .animation(.spring())
-//               .overlay(alignment: .bottom,content: {
-//                   HStack(spacing: 5){
-//                       ForEach(0..<numberOfImages) { index in
-//                           var isEnable = self.currentIndex == index
-//                           Circle()
-//                               .strokeBorder(Color.blue,lineWidth: 1)
-//                               .frame(width: 10,height: 10)
-//                               .background(Circle().foregroundColor(isEnable ? Color.green : Color.white))
-//                       }
-//                   }
-//                   .padding(.bottom)
-//               })
-//               .onReceive(self.timer) { _ in
-//                   print("khanh self.currentIndex",self.currentIndex)
-//                   self.currentIndex = (self.currentIndex + 1) % 3
-//               }
+extension ImageCarouselView {
+    private var body2: some View {
+        GeometryReader { geometry in
+            HStack(spacing: 0) {
+                self.content
+            }
+            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
+            .offset(x: CGFloat(self.currentIndex) * -geometry.size.width, y: 0)
+            .animation(.spring())
+            .overlay(alignment: .bottom,content: {
+                controlPage
+                HStack(spacing: 5){
+                    ForEach(0..<numberOfImages) { index in
+                        var isEnable = self.currentIndex == index
+                        Circle()
+                            .strokeBorder(Color.blue,lineWidth: 1)
+                            .frame(width: 10,height: 10)
+                            .background(Circle().foregroundColor(isEnable ? Color.green : Color.white))
+                    }
+                }
+                .padding(.bottom)
+            })
+            .onReceive(self.timer) { _ in
+                print("khanh self.currentIndex",self.currentIndex)
+                self.currentIndex = (self.currentIndex + 1) % 3
+            }
+        }
+    }
+}
