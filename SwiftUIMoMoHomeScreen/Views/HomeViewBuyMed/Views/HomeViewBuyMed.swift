@@ -17,10 +17,11 @@ struct HomeViewBuyMed: View {
         NavigationView {
             ZStack {
                 Color.gray.opacity(0.1)
-                ScrollView{
+                ScrollView(showsIndicators: false){
                     searchHeader
                     ServiceBlock(listService: vm.dataServices)
                     carouselBannerWithAnimationImage
+                    ProductBlock()
                 }
                    
             }

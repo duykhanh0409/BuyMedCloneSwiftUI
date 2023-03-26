@@ -12,6 +12,8 @@
 		A2AEB6AA29B2FFC10050C235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AEB6A929B2FFC10050C235 /* Assets.xcassets */; };
 		A2AEB6AD29B2FFC10050C235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2AEB6AC29B2FFC10050C235 /* Preview Assets.xcassets */; };
 		A2AEB6B429B4C8980050C235 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AEB6B329B4C8980050C235 /* HomeView.swift */; };
+		A2EB794029D099AD00ABCCE9 /* ProductBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EB793F29D099AD00ABCCE9 /* ProductBlock.swift */; };
+		A2EB794229D0A21E00ABCCE9 /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EB794129D0A21E00ABCCE9 /* ProductItem.swift */; };
 		A2F32F4229CAEF7B00CC022A /* HomeViewBuyMed.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F4129CAEF7B00CC022A /* HomeViewBuyMed.swift */; };
 		A2F32F4429CAF9CC00CC022A /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F4329CAF9CC00CC022A /* DiscoveryView.swift */; };
 		A2F32F4629CAF9E700CC022A /* QuickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F32F4529CAF9E700CC022A /* QuickView.swift */; };
@@ -42,6 +44,8 @@
 		A2AEB6A929B2FFC10050C235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2AEB6AC29B2FFC10050C235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2AEB6B329B4C8980050C235 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A2EB793F29D099AD00ABCCE9 /* ProductBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBlock.swift; sourceTree = "<group>"; };
+		A2EB794129D0A21E00ABCCE9 /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
 		A2F32F4129CAEF7B00CC022A /* HomeViewBuyMed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBuyMed.swift; sourceTree = "<group>"; };
 		A2F32F4329CAF9CC00CC022A /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
 		A2F32F4529CAF9E700CC022A /* QuickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickView.swift; sourceTree = "<group>"; };
@@ -177,7 +181,7 @@
 			children = (
 				A2F32F5429CB096000CC022A /* ServiceBlock.swift */,
 				A2F32F6929CEA1AE00CC022A /* ImageCarouselBlock.swift */,
-				A2F32F6B29CEAA3700CC022A /* Carousel.swift */,
+				A2EB793F29D099AD00ABCCE9 /* ProductBlock.swift */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -185,8 +189,10 @@
 		A2F32F5129CB060900CC022A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A2F32F6B29CEAA3700CC022A /* Carousel.swift */,
 				A2F32F5229CB061F00CC022A /* ServiceBlockItem.swift */,
 				A2F32F6F29CEC3F000CC022A /* URLImage.swift */,
+				A2EB794129D0A21E00ABCCE9 /* ProductItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 			files = (
 				A2F32F6429CC40CA00CC022A /* ApiManager.swift in Sources */,
 				A2AEB6B429B4C8980050C235 /* HomeView.swift in Sources */,
+				A2EB794229D0A21E00ABCCE9 /* ProductItem.swift in Sources */,
 				A2F32F4229CAEF7B00CC022A /* HomeViewBuyMed.swift in Sources */,
 				A2F32F6C29CEAA3700CC022A /* Carousel.swift in Sources */,
 				A2F32F5B29CB134B00CC022A /* NetworkingManager.swift in Sources */,
@@ -337,6 +344,7 @@
 				A2F32F5929CB0FBB00CC022A /* ServiceModel.swift in Sources */,
 				A2F32F5529CB096000CC022A /* ServiceBlock.swift in Sources */,
 				A2F32F5329CB061F00CC022A /* ServiceBlockItem.swift in Sources */,
+				A2EB794029D099AD00ABCCE9 /* ProductBlock.swift in Sources */,
 				A2AEB6A829B2FFC00050C235 /* ContentView.swift in Sources */,
 				A2AEB6A629B2FFC00050C235 /* SwiftUIMoMoHomeScreenApp.swift in Sources */,
 				A2F32F4429CAF9CC00CC022A /* DiscoveryView.swift in Sources */,
