@@ -11,6 +11,6 @@ class Config {
     public static let accessKey = "w-9U9iNWYqdt_Cork08Vrt3f8SpeMTlR-qDmWLLBfaU"
     public static let baseUrl = "https://api.v2-stg.thuocsi.vn"
     public static let baseUrlWeb = "https://web.v2-stg.thuocsi.vn"
-    public static let baseToken = "UEFSVE5FUi92Mi5mcm9udGVuZC53ZWI6Nk11d1ZUazRRd1VkZXdoUDhldW5EN0hKZVF0"
-    public static let bearerToken = "Q1VTVE9NRVIvQ1VTVE9NRVJfNk5WRzBEN1pMVDplcEVCUHVwaFA0Rll3SmthYzZBSW1xYVJiNHRCQThqZXk5c0RDTTMzM2FMMnJxSjU="
+    public static let baseToken = "Basic UEFSVE5FUi92Mi5mcm9udGVuZC53ZWI6Nk11d1ZUazRRd1VkZXdoUDhldW5EN0hKZVF0"
+    public static let bearerToken = "Bearer Q1VTVE9NRVIvQ1VTVE9NRVJfNk5WRzBEN1pMVDplcEVCUHVwaFA0Rll3SmthYzZBSW1xYVJiNHRCQThqZXk5c0RDTTMzM2FMMnJxSjU="
 }

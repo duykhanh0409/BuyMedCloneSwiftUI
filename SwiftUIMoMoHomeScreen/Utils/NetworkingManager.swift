@@ -24,13 +24,37 @@ class NetworkingManager{
         }
     }
     
-    static func fetchData(url:String, method: String) -> Publishers.ReceiveOn<Publishers.TryMap<Publishers.SubscribeOn<URLSession.DataTaskPublisher,DispatchQueue>, Data>, DispatchQueue>{
-        let urlString = URL(string: Config.baseUrl + url)
+    static func fetchData(url:String, method: String, isQuery: Bool, querys: [String:Any], isBasic: Bool = false) -> Publishers.ReceiveOn<Publishers.TryMap<Publishers.SubscribeOn<URLSession.DataTaskPublisher,DispatchQueue>, Data>, DispatchQueue>{
+        var urlString = URL(string: Config.baseUrl + url )
         var urlRequest = URLRequest(url: urlString!)
-          urlRequest.httpMethod = method
+        if isQuery == true && querys["key"] != nil  {
+            let urlComp = NSURLComponents(string: Config.baseUrl + url)!
+
+               var items = [URLQueryItem]()
+
+               for (key,value) in querys {
+                   items.append(URLQueryItem(name: key, value: value as? String))
+               }
+
+               items = items.filter{!$0.name.isEmpty}
+
+               if !items.isEmpty {
+                 urlComp.queryItems = items
+               }
+            urlRequest = URLRequest(url: urlComp.url!)
+        }
         
-        urlRequest.setValue("Basic \(Config.baseToken)",
+        if method == "POST" {
+            print("khanh parse querys", querys)
+            let requestBody = try? JSONSerialization.data(withJSONObject: querys, options: [])
+            print("khanh querys", requestBody)
+            urlRequest.httpBody = requestBody
+        }
+        
+        urlRequest.httpMethod = method
+        urlRequest.setValue("\(isBasic ? Config.baseToken : Config.bearerToken)",
                               forHTTPHeaderField: "Authorization")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         // chổ này chưa biết unwrap cái URL sao nên đang để force safety un
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
                 .subscribe(on: DispatchQueue.global(qos: .default))
@@ -54,7 +78,7 @@ class NetworkingManager{
     static func handleUrlResponse(output: URLSession.DataTaskPublisher.Output, url: URLRequest) throws -> Data{
         guard let response = output.response as? HTTPURLResponse,
               response.statusCode >= 200 && response.statusCode < 300 else{
-            print("khanh response",(output.response as? HTTPURLResponse)?.statusCode)
+            print("khanh response with \(url) ", (output.response as? HTTPURLResponse)?.statusCode)
             throw NetworkingError.BadURLResponse(url: url)
         }
         return output.data

@@ -35,7 +35,7 @@ struct ImageCarouselView<Content: View>: View {
                     controlPage
                 })
                 .onReceive(self.timer) { _ in
-                    print("khanh currentIndex", self.currentIndex)
+//                    print("khanh currentIndex", self.currentIndex)
                     withAnimation {
                         self.currentIndex = self.currentIndex < 3 ? self.currentIndex + 1 : 0
                     }

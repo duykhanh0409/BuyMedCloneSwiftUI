@@ -132,6 +132,7 @@
 		A2F32F4B29CB054D00CC022A /* HomeViewBuyMed */ = {
 			isa = PBXGroup;
 			children = (
+				A2F32F7A29CEE7E700CC022A /* BlockDailyProduct */,
 				A2F32F5029CB05C200CC022A /* Block */,
 				A2F32F7529CED9CE00CC022A /* ViewModel */,
 				A2F32F7429CED9BC00CC022A /* Views */,
@@ -234,6 +235,13 @@
 				A2F32F6129CBF95B00CC022A /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2F32F7A29CEE7E700CC022A /* BlockDailyProduct */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BlockDailyProduct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -12,9 +12,12 @@ class HomeViewModel: ObservableObject {
     
     @Published var dataServices: ServiceModel = ServiceModel(status: "Ok", data: [], message: "oke")
     @Published var dataBanner: BannerModel = BannerModel(status: "", data: [], message: "", isBasic: true, timeExcute: 1, timeFetchAPI: 1)
+    @Published var  dataProduct: ProductModel = ProductModel(status: "", data: [], message: "", total: 1)
     
     private let dataServiceApi = DataServiceApi()
     private let getBannerApi = BannerApi()
+    private let productApi = ProductApi()
+    
     private var cancellabels = Set<AnyCancellable>()
 
     init() {
@@ -48,6 +51,10 @@ class HomeViewModel: ObservableObject {
     
     func getDataBannerHome(){
         getBannerApi.getDataBannerWithCombine()
+    }
+    
+    func getDataProduct(){
+        productApi.getDataProductWithCombine()
     }
     
     
