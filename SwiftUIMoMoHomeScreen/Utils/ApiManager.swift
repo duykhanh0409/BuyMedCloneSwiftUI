@@ -10,13 +10,24 @@ import Foundation
 
 class ApiManager {
     
-    static func fetchData <T:Codable> (urlString: String, type: T.Type, method: String, onSuccess: @escaping (T)->Void, onFail: @escaping(String) -> Void) {
+    static func fetchData <T:Codable> (urlString: String, type: T.Type, method: String,
+                                       querys: [String:Any] = [:],isBasic:Bool = false, onSuccess: @escaping (T)->Void, onFail: @escaping(String) -> Void) {
     
         guard let url = URL(string: Config.baseUrl + urlString) else {return}
-        
         var request = URLRequest(url: url)
+        if method == "POST" {
+            print("khanh parse querys", querys)
+            let requestBody = try? JSONSerialization.data(withJSONObject: querys, options: [])
+            print("khanh querys", requestBody)
+            request.httpBody = requestBody
+        }
+        
+       
         request.httpMethod = method
-        request.setValue("Basic \(Config.baseToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("\(isBasic ? Config.baseToken : Config.bearerToken)",
+                              forHTTPHeaderField: "Authorization")
+     
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     
     
         let task = URLSession.shared.dataTask(with: request) { data, response, error in

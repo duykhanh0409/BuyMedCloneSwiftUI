@@ -48,4 +48,15 @@ class ProductApi {
             })
         
     }
+    
+    // MARK: - Call Api with URLSession
+    func getDataProductWithURLSession(onCallBack: @escaping (ProductModel)->Void){
+        let url = "/marketplace/frontend-apis/v1/search/fuzzy"
+        ApiManager.fetchData(urlString: url, type: ProductModel.self, method: "POST",querys: queryData) { response in
+            onCallBack(response)
+        } onFail: { error in
+            print("call api data service error")
+        }
+
+    }
 }

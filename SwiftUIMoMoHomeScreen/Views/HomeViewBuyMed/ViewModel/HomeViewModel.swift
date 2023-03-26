@@ -55,6 +55,9 @@ class HomeViewModel: ObservableObject {
     
     func getDataProduct(){
         productApi.getDataProductWithCombine()
+//        productApi.getDataProductWithURLSession { productData in
+//            self.dataProduct = productData
+//        }
     }
     
     
