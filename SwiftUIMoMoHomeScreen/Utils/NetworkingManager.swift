@@ -68,7 +68,7 @@ class NetworkingManager{
         
         urlRequest.setValue("Basic \(Config.baseToken)",
                               forHTTPHeaderField: "Authorization")
-        // chổ này chưa biết unwrap cái URL sao nên đang để force safety un
+       
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
                 .subscribe(on: DispatchQueue.global(qos: .default))
                 .tryMap { try handleUrlResponse(output: $0,url: urlRequest )}
