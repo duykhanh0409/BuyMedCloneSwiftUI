@@ -46,7 +46,6 @@ class NetworkingManager{
         
         if method == "POST" {
             let requestBody = try? JSONSerialization.data(withJSONObject: querys, options: [])
-            print("khanh querys", requestBody)
             urlRequest.httpBody = requestBody
         }
         
