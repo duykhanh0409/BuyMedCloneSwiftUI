@@ -24,9 +24,11 @@ class NetworkingManager{
         }
     }
     
-    static func fetchData(url:String, method: String, isQuery: Bool, querys: [String:Any], isBasic: Bool = false) -> Publishers.ReceiveOn<Publishers.TryMap<Publishers.SubscribeOn<URLSession.DataTaskPublisher,DispatchQueue>, Data>, DispatchQueue>{
+    static func fetchData(url:String, method: String, isQuery: Bool, querys: [String:Any], isBasic: Bool = false) -> Publishers.ReceiveOn<Publishers.TryMap<Publishers.SubscribeOn<URLSession.DataTaskPublisher,DispatchQueue>, Data>, DispatchQueue> {
+        
         var urlString = URL(string: Config.baseUrl + url )
         var urlRequest = URLRequest(url: urlString!)
+        
         if isQuery == true && querys["key"] != nil  {
             let urlComp = NSURLComponents(string: Config.baseUrl + url)!
 
@@ -59,6 +61,7 @@ class NetworkingManager{
                 .tryMap { try handleUrlResponse(output: $0,url: urlRequest )}
                 .receive(on: DispatchQueue.main)
     }
+    
     static func fetchDataWithDomainWeb(url:String, method: String) -> Publishers.ReceiveOn<Publishers.TryMap<Publishers.SubscribeOn<URLSession.DataTaskPublisher,DispatchQueue>, Data>, DispatchQueue>{
         let urlString = URL(string: Config.baseUrlWeb + url)
         var urlRequest = URLRequest(url: urlString!)
