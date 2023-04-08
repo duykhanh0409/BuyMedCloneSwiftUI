@@ -18,7 +18,7 @@ class DataServiceApi {
 //    }
     // MARK: - Call Api with Combine
     func getDataServiceFromInternalFollowCombile(){
-        let url = "/core/config-manager/v1/app-value/single?appCode=972AXHR2"
+        let url = "/core/config-manager/v1/app-value/single?appCode=FEQ1PGEQ"
         dataServiceScription = NetworkingManager.fetchData(url: url,method: "GET", isQuery: false, querys: [:], isBasic: true)
             .decode(type: ServiceModel.self, decoder: JSONDecoder())
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: {[weak self] (returnedService) in

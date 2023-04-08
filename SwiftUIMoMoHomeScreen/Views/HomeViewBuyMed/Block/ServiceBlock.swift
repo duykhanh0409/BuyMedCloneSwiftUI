@@ -10,10 +10,12 @@ import SwiftUI
 struct ServiceBlock: View {
     let listService: ServiceModel
     var body: some View {
-        HStack(spacing: 10) {
+        ScrollView(.horizontal ,showsIndicators: false) {
+            HStack(spacing: 10) {
                 ForEach(listService.data, id: \.appValueCode) { service in
                     ServiceBlockItem(service: service)
                 }
+            }
 
         }
         .padding(.horizontal)
