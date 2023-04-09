@@ -21,13 +21,13 @@ struct HomeViewBuyMed: View {
                     searchHeader
                     ServiceBlock(listService: vm.dataServices)
                     carouselBannerWithAnimationImage
-                    ProductBlock()
+                    ProductBlock(listProduct: vm.dataProduct)
                 }
                    
             }
             .onAppear {
 //                vm.getDataServiceFromInternal()
-                vm.getDataServiceFromInternalFromCombine()
+//                vm.getDataServiceFromInternalFromCombine()
                 vm.getDataBannerHome()
                 vm.getDataProduct()
 

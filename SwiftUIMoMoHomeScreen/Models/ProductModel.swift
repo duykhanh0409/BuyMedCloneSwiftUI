@@ -99,7 +99,7 @@ struct DatumProduct: Codable {
     let owner: SellerCode?
     let productID: Int?
     let registrationNumber: String?
-    let retailUnit: RetailUnit?
+//    let retailUnit: RetailUnit?
     let retailUnitQuantityPerUnit: Int?
     let searchKeyword: String?
     let sellerSubCategoryCode: SellerSubCategoryCode?

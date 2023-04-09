@@ -11,6 +11,7 @@ struct ProductBlock: View {
     
 //    let dataTest = ProductItem(consumedMaxQuantity: <#T##ConsumedMaxQuantity?#>, isAvailable: <#T##Bool?#>, product: <#T##DatumProduct?#>, sellerInfo: <#T##SellerInfo?#>, sku: <#T##DatumSku?#>, skuLimit: <#T##SkuLimit?#>, deal: <#T##Deal?#>)
     let screenSize: CGRect = UIScreen.main.bounds
+    let listProduct: ProductModel
     var body: some View {
         VStack(alignment:.leading) {
             Text("Sản phẩm bán chạy")
@@ -19,8 +20,9 @@ struct ProductBlock: View {
                 .padding(.horizontal)
                 .padding(.top,20)
             ScrollView(.horizontal, showsIndicators: false) {
+                var x = print("khanh print", listProduct.data?.count)
                     HStack {
-                        ForEach(0..<3) { index in
+                        ForEach(listProduct.data ?? [], id: \.sku?.sku) { index in
                             ProductItemView()
                         }
 
@@ -32,9 +34,9 @@ struct ProductBlock: View {
         .padding(.bottom,30)
     }
 }
-
-struct ProductBlock_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductBlock()
-    }
-}
+//
+//struct ProductBlock_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProductBlock(listProduct: ProductModel())
+//    }
+//}

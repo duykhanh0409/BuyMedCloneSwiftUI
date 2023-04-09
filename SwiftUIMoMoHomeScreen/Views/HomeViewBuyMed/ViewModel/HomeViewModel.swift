@@ -43,6 +43,13 @@ class HomeViewModel: ObservableObject {
             }
             .store(in: &cancellabels)
         
+        productApi.$dataProduct.sink { [weak self] (returnData) in
+            if let dataProductResponse = returnData{
+                self?.dataProduct = dataProductResponse
+            }
+        }
+        .store(in: &cancellabels)
+        
     }
     
     func getDataServiceFromInternalFromCombine(){
