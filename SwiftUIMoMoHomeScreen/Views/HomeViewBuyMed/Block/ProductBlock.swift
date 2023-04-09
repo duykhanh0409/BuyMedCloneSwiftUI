@@ -22,8 +22,8 @@ struct ProductBlock: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 var x = print("khanh print", listProduct.data?.count)
                     HStack {
-                        ForEach(listProduct.data ?? [], id: \.sku?.sku) { index in
-                            ProductItemView()
+                        ForEach(listProduct.data ?? [], id: \.sku?.sku) { item in
+                            ProductItemView(item: item)
                         }
 
                     }
