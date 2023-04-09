@@ -12,13 +12,17 @@ struct ProductItemView: View {
     var body: some View {
         VStack(alignment:.leading,spacing: 0) {
             ZStack(alignment:.topTrailing) {
-                Image("anh1")
-                   .resizable()
-                   .cornerRadius(10)
-                   .aspectRatio(contentMode: .fit)
-                   .frame(width:150, height: 150)
-                   .padding(.top, 35)
+//                Image("anh1")
+//                   .resizable()
+//                   .cornerRadius(10)
+//                   .aspectRatio(contentMode: .fit)
+//                   .frame(width:150)
+//                   .scaledToFit()
+//                   .padding(.top, 35)
 //                           .background(Color.yellow)
+                ImageContainerView(image: "anh1")
+                    .frame(width:150, height: 150)
+                    .padding(.top, 35)
                 Image(systemName: "heart")
                     .padding(.top)
                     .foregroundColor(.gray)
@@ -36,7 +40,9 @@ struct ProductItemView: View {
                 .fontWeight(.semibold)
                 .padding(.bottom)
         }
+
         .frame(width: (screenSize.width - 30)/2, height: 320)
+        
 //                .background(.blue)
         .overlay(
             RoundedRectangle(cornerRadius: 10)

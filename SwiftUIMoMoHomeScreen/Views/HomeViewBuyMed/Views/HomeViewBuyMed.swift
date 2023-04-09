@@ -27,7 +27,7 @@ struct HomeViewBuyMed: View {
             }
             .onAppear {
 //                vm.getDataServiceFromInternal()
-//                vm.getDataServiceFromInternalFromCombine()
+                vm.getDataServiceFromInternalFromCombine()
                 vm.getDataBannerHome()
                 vm.getDataProduct()
 
